@@ -2,15 +2,25 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { DiPhp, DiSass, DiLaravel } from 'react-icons/di';
+import { FaLeaf, FaVuejs } from 'react-icons/fa';
+import { DiJavascript1 } from 'react-icons/di';
 
 const projects = [
   {
     name: "Casa Lirio",
     description:
-      "Designing and developing the website's user interface using SCSS to create visually appealing and responsive styles.",
+      `Designing and developing the website's user interface using SCSS to create visually appealing and responsive styles.`,
     image: "/casa-lirio.jpeg",
     github: "https://casalirio.com",
     link: "https://casalirio.com",
+    stack: {
+      DiPhp: true,
+      DiScss: true,
+      DiLaravel: true,
+      FaVuejs: false
+    },
+
   },
   {
     name: "Huddle Landing Page",
@@ -18,6 +28,9 @@ const projects = [
     image: "/huddle-landing.jpeg",
     github: "https://github.com/codewithxavi/Huddle-landing-page-with-curved-sections",
     link: "https://huddle-landing-page-codewithxavi.vercel.app/",
+    stack: {
+      DiJavascript1: true
+    },
   },
   {
     name: "Rick And Morty",
@@ -25,6 +38,9 @@ const projects = [
     image: "/rick-and-morty.jpeg",
     github: "https://github.com/codewithxavi/rick_and_morty_vue",
     link: "https://rick-and-morty-vue-eight.vercel.app/",
+    stack: {
+      FaVuejs: true,
+    },
   },
 
 ]
@@ -57,6 +73,21 @@ const ProjectsSection = () => {
                   <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.name}</h1>
                   <p className="text-lg leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                     {project.description}
+                    {/* Laravel Icon */}
+                    {project.stack.DiLaravel ? <DiLaravel size={40} /> : null}
+
+                    {/* php Icon */}
+                    {project.stack.DiPhp ? <DiPhp size={40} /> : null}
+
+                    {/* sass Icon */}
+                    {project.stack.DiScss ? <DiSass size={40} /> : null}
+
+                    {/* Vue Icon */}
+                    {project.stack.FaVuejs ? <FaVuejs size={40} /> : null}
+
+                    {/* JavaScript Icon */}
+                    {project.stack.DiJavascript1 ? <DiJavascript1 size={40} /> : null}
+
                   </p>
                   <div className="flex flex-row align-bottom space-x-4">
                     <Link href={project.github} target="_blank">
