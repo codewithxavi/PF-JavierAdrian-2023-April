@@ -42,6 +42,7 @@ const Footer = () => {
             {social.map((item) => (
               <a
                 target={"_blank"}
+                rel={"noreferrer"}
                 key={item.name}
                 href={item.href}
                 className="text-gray-400 hover:text-gray-500"
