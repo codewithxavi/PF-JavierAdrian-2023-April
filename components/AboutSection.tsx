@@ -35,7 +35,7 @@ const AboutSection = () => {
             <br />
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start pb-5">
               {skills.map((item, idx) => {
                 return (
                   <p
