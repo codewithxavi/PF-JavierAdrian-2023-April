@@ -25,7 +25,7 @@ const HeroSection = () => {
             </div>
 
             <Image
-              src="/xavi.png"
+              src="/xavi.webp"
               alt={"profile image"}
               width={300}
               height={100}

@@ -11,7 +11,7 @@ const projects = [
     name: "Casa Lirio",
     description:
       `Designing and developing the website's user interface using SCSS to create visually appealing and responsive styles.`,
-    image: "/casa-lirio.jpeg",
+    image: "/casa-lirio.webp",
     github: "https://casalirio.com",
     link: "https://casalirio.com",
     stack: {
@@ -25,7 +25,7 @@ const projects = [
   {
     name: "Huddle Landing Page",
     description: "The Huddle landing page frontend mentor challenge involves building a responsive landing page for a fictional company called 'Huddle' using HTML, CSS, and potentially JavaScript. The page should be visually appealing, well-organized, and functional on both desktop and mobile devices.",
-    image: "/huddle-landing.jpeg",
+    image: "/huddle-landing.webp",
     github: "https://github.com/codewithxavi/Huddle-landing-page-with-curved-sections",
     link: "https://huddle-landing-page-codewithxavi.vercel.app/",
     stack: {
@@ -35,7 +35,7 @@ const projects = [
   {
     name: "Rick And Morty",
     description: "The application utilizes the Rick and Morty API to fetch and display data about the characters, episodes, and locations. The user interface is designed to be user-friendly and responsive, allowing users to easily search for and browse information about their favorite characters, episodes, and locations from the show.",
-    image: "/rick-and-morty.jpeg",
+    image: "/rick-and-morty.webp",
     github: "https://github.com/codewithxavi/rick_and_morty_vue",
     link: "https://rick-and-morty-vue-eight.vercel.app/",
     stack: {
