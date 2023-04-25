@@ -1,5 +1,5 @@
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 
 const skills = [
   { skill: "HTML" },
@@ -40,7 +40,7 @@ const AboutSection = () => {
                 return (
                   <p
                     key={idx}
-                    className="bg-purple-600 px-4 py-2 mr-2 mt-2 text-sky-50 rounded font-semibold cursor-pointer"
+                    className="bg-purple-600 px-4 py-2 mr-4 mt-4 text-sky-50 rounded font-semibold"
                   >
                     {item.skill}
                   </p>
@@ -52,7 +52,7 @@ const AboutSection = () => {
               alt="code"
               width={400}
               height={325}
-              className="hidden md:block md:relative md:bottom-4 md:left-32 md:z-0 bg-transparent mt-5"
+              className="hidden md:block md:relative md:bottom-4 md:z-0 bg-transparent mt-5"
             />
           </div>
         </div>

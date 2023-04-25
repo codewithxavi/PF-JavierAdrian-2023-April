@@ -1,11 +1,13 @@
 "use client"
-import React from "react"
-import { useState } from "react"
-import { Link } from "react-scroll/modules"
-import { usePathname } from "next/navigation"
-import { useTheme } from "next-themes"
-import { RiMoonFill, RiSunLine } from "react-icons/ri"
-import { IoMdMenu, IoMdClose } from "react-icons/io"
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-scroll/modules";
+import Link2 from "next/link";
+import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { RiMoonFill, RiSunLine } from "react-icons/ri";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+
 
 interface NavItem {
   label: string
@@ -33,14 +35,16 @@ export default function Navbar() {
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
   return (
-    <header className="w-full mx-auto sm:px-8 fixed top-0 z-50  bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <header className="w-full mx-auto sm:px-8 fixed top-0 z-50  bg-white dark:bg-stone-900  dark:border-stone-600">
       <div className="justify-between md:items-center md:flex mx-auto max-w-[77rem]">
         <div>
           <div className="flex items-center justify-between px-5  py-3 md:py-5 md:block sm:px-0">
 
             <Link to="home">
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">@codewithxavi</h2>
+                <h2 className="text-2xl font-bold">
+                  @codewithxavi
+                </h2>
               </div>
             </Link>
             <div className="md:hidden">
@@ -66,7 +70,7 @@ export default function Navbar() {
                     key={idx}
                     to={item.page}
                     className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
+                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 dark:hover:text-purple-400 cursor-pointer"
                     }
                     activeClass="active"
                     spy={true}
@@ -84,12 +88,12 @@ export default function Navbar() {
                   onClick={() => setTheme("light")}
                   className="p-2 rounded-xl"
                 >
-                  <RiSunLine size={25} color="black" />
+                  <RiSunLine size={25} />
                 </button>
               ) : (
                 <button
                   onClick={() => setTheme("dark")}
-                  className="p-2 rounded-xl"
+                  className="p-2 rounded-xl "
                 >
                   <RiMoonFill size={25} />
                 </button>

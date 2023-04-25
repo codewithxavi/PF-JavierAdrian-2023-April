@@ -1,7 +1,7 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { DiPhp, DiSass, DiLaravel } from 'react-icons/di';
 import { FaLeaf, FaVuejs } from 'react-icons/fa';
 import { DiJavascript1 } from 'react-icons/di';
@@ -73,22 +73,14 @@ const ProjectsSection = () => {
                   <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.name}</h1>
                   <p className="text-lg leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                     {project.description}
-                    {/* Laravel Icon */}
-                    {project.stack.DiLaravel ? <DiLaravel size={40} /> : null}
-
-                    {/* php Icon */}
-                    {project.stack.DiPhp ? <DiPhp size={40} /> : null}
-
-                    {/* sass Icon */}
-                    {project.stack.DiScss ? <DiSass size={40} /> : null}
-
-                    {/* Vue Icon */}
-                    {project.stack.FaVuejs ? <FaVuejs size={40} /> : null}
-
-                    {/* JavaScript Icon */}
-                    {project.stack.DiJavascript1 ? <DiJavascript1 size={40} /> : null}
-
                   </p>
+                  <div className="flex mb-12">
+                    {project.stack.DiLaravel ? <DiLaravel size={40} /> : null}
+                    {project.stack.DiPhp ? <DiPhp size={40} /> : null}
+                    {project.stack.DiScss ? <DiSass size={40} /> : null}
+                    {project.stack.FaVuejs ? <FaVuejs size={40} /> : null}
+                    {project.stack.DiJavascript1 ? <DiJavascript1 size={40} /> : null}
+                  </div>
                   <div className="flex flex-row align-bottom space-x-4">
                     <Link href={project.github} target="_blank">
                       <BsGithub
