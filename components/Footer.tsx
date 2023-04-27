@@ -1,3 +1,10 @@
+import { useState, useEffect } from 'react';
+
+import { raleway } from "../utils/fonts";
+import { interLatin } from "../utils/fonts";
+
+
+
 const social = [
   {
     name: "Youtube",
@@ -34,6 +41,19 @@ const social = [
 
 
 const Footer = () => {
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formattedDate = `${currentDateTime.getDate()}/${currentDateTime.getMonth() + 1}/${currentDateTime.getFullYear()}`;
+  const formattedTime = currentDateTime.toLocaleTimeString();
+
   return (
     <footer aria-labelledby="footer-heading">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -52,8 +72,8 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-            Developed with 💜 by Javier Adrián
+          <p className={`mt-8 text-base text-gray-400 md:order-1 md:mt-0 ${raleway}`}>
+            Developed with 💜 by Javier Adrián on {formattedDate} {/*at {formattedTime}*/ }
           </p>
         </div>
       </div>

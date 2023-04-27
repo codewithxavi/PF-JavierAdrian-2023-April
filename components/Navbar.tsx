@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
+import { raleway } from "../utils/fonts";
 
 interface NavItem {
   label: string
@@ -42,7 +43,7 @@ export default function Navbar() {
 
             <Link to="home">
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">
+                <h2 className={`text-2xl font-bold ${raleway.className}`}>
                   @codewithxavi
                 </h2>
               </div>
@@ -79,7 +80,7 @@ export default function Navbar() {
                     duration={500}
                     onClick={() => setNavbar(!navbar)}
                   >
-                    {item.label}
+                   <span className={`${raleway.className} `}>{item.label}</span>
                   </Link>
                 )
               })}

@@ -6,6 +6,11 @@ import { DiPhp, DiSass, DiLaravel } from 'react-icons/di';
 import { FaLeaf, FaVuejs } from 'react-icons/fa';
 import { DiJavascript1 } from 'react-icons/di';
 
+import { raleway } from "../utils/fonts";
+import { interLatin } from "../utils/fonts";
+import { MdWorkOutline } from "react-icons/md";
+
+
 const projects = [
   {
     name: "Casa Lirio",
@@ -48,9 +53,10 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="my-10 font-bold text-4xl">
-        Projects
-      </h1>
+      <h2 className={`my-10 text-4xl flex items-center ${interLatin.className}`}>
+        Projects <MdWorkOutline className="ml-2" />
+      </h2>
+
 
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
@@ -69,9 +75,9 @@ const ProjectsSection = () => {
                     />
                   </Link>
                 </div>
-                <div className="mt-8 md:w-2/3">
-                  <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.name}</h1>
-                  <p className="text-lg leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                <div className="mt-8 md:mt-0 md:w-2/3">
+                  <h1 className={`text-2xl md:text-2xl font-bold mb-6 ${interLatin.className}`}>{project.name}</h1>
+                  <p className={`text-lg leading-7 mb-4 text-neutral-600 dark:text-neutral-400 ${raleway.className}`}>
                     {project.description}
                   </p>
                   <div className="flex mb-12">

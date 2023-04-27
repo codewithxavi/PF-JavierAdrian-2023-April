@@ -16,3 +16,27 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
