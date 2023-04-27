@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
+
 import { raleway } from "../utils/fonts";
 import { interLatin } from "../utils/fonts";
 
@@ -34,7 +35,6 @@ const AboutSection = () => {
           About Me <span className="ml-2"><HiOutlineUserCircle /></span>
         </h2>
 
-
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:flex-row md:text-left text-neutral-600 dark:text-neutral-400">
           <div className="md:w-1/2">
             <p className={`${raleway.className} mt-4 leading-7`}>
@@ -50,18 +50,27 @@ const AboutSection = () => {
             <div className="flex flex-wrap flex-row z-10 md:justify-start pb-5">
               {skills.map((item, idx) => {
                 return (
-                  <p
+                  <div
                     key={idx}
                     className="bg-neutral-600  px-4 py-2 mr-4 mt-4 text-sky-50 rounded font-semibold"
+                    title={item.name}
                   >
                     <span
-                      className="dark:text-white-900 text-3xl"
-                      title={item.name}
+                      
+                      className="dark:text-white-900 text-3xl pointer-events-none"
                     >
+                      {/* <IconContext.Provider value={{ attr: item.name }}>
+                        {item.icon}
+                      </IconContext.Provider> */}
+
+                     
+                      {/* <IconContext.Provider value={{ attr: { title: item.name as string } }}>
+                        {item.name}
+                      </IconContext.Provider> */}
+
                       {item.icon}
                     </span>
-
-                  </p>
+                  </div>
                 )
               })}
             </div>
