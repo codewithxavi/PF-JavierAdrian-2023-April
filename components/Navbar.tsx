@@ -90,6 +90,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setTheme("light")}
                   className="p-2 rounded-xl"
+                  aria-label="enable light theme"
                 >
                   <RiSunLine size={25} />
                 </button>
@@ -97,6 +98,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setTheme("dark")}
                   className="p-2 rounded-xl "
+                  aria-label="enable dark theme"
                 >
                   <RiMoonFill size={25} />
                 </button>
