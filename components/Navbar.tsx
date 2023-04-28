@@ -52,6 +52,7 @@ export default function Navbar() {
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border "
                 onClick={() => setNavbar(!navbar)}
+                aria-label="menu"
               >
                 {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
               </button>
