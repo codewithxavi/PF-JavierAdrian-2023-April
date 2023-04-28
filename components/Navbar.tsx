@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-scroll/modules";
-import Link2 from "next/link";
+// import { Link } from "react-scroll/modules";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div>
           <div className="flex items-center justify-between px-5  py-3 md:py-5 md:block sm:px-0">
 
-            <Link to="home" aria-label="Home">
+            <Link href="#home" aria-label="Home">
               <div className="container flex items-center space-x-2">
                 <h2 className={`text-2xl font-bold ${raleway.className}`}>
                   @codewithxavi
@@ -71,15 +71,10 @@ export default function Navbar() {
                   <Link
                     aria-label={item.label}
                     key={idx}
-                    to={item.page}
+                    href={`#${item.page}`}
                     className={
                       "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 dark:hover:text-purple-400 cursor-pointer"
                     }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
                     onClick={() => setNavbar(!navbar)}
                   >
                    <span className={`${raleway.className} `}>{item.label}</span>
