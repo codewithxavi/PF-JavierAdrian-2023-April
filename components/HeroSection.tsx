@@ -7,16 +7,20 @@ import Image from 'next/image';
 import { raleway } from "../utils/fonts";
 import { interLatin } from "../utils/fonts";
 
-
+import { MdSportsSoccer } from "react-icons/md";
 
 
 const HeroSection = () => {
-  
+
   return (
     <section id="home">
       <div className="flex flex-col items-center  animate-fadeIn animation-delay-2 ">
         <div className="w-5/5 pt-24">
-          <h1 className={`flex  pb-4 text-5xl font-extrabold text-transparent md:h-24 bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-950 dark:from-yellow-300 dark:to-emerald-500 md:text-7xl ${interLatin.className} font-bold`}>Hi, I&apos;m Javi! </h1>
+          <h1 className={`flex pb-4 text-5xl font-extrabold text-transparent md:h-24 bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-950 dark:from-yellow-300 dark:to-emerald-500 md:text-7xl ${interLatin.className} font-bold`}>
+            Hi, I&apos;m Javi!
+          </h1>
+
+
           <div className="md:flex justify-center">
             <div className="flex-col w-full">
               <div className="text-  w-12/12 mb-5 text-neutral-600 dark:text-neutral-400">

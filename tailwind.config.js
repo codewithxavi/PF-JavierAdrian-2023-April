@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
       animation: {
+        'soccer-jump': 'soccer-jump 0.8s ease-in-out',
         fadeIn: "fadeIn 1.5s",
         bounce:
           "bounce 0.5s alternate cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite",
@@ -39,6 +40,26 @@ module.exports = {
           from: { transform: "translateY(10px)" },
           to: { transform: "translateY(0)" },
         },
+        'soccer-jump': {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '20%': {
+            transform: 'translateX(10px)',
+          },
+          '40%': {
+            transform: 'translateX(20px)',
+          },
+          '60%': {
+            transform: 'translateX(30px)',
+          },
+          '80%': {
+            transform: 'translateX(20px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        },  
       },
     },
   },

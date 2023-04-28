@@ -41,3 +41,22 @@ a {
 .tooltip:hover::after {
   opacity: 1;
 }
+
+@keyframes custom-bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-custom-bounce {
+  animation-name: custom-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}

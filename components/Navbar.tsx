@@ -10,6 +10,8 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 import { raleway } from "../utils/fonts";
 
+import { MdSportsSoccer } from "react-icons/md";
+
 interface NavItem {
   label: string
   page: string
@@ -43,9 +45,22 @@ export default function Navbar() {
 
             <Link href="#home" aria-label="Home">
               <div className="container flex items-center space-x-2">
-                <h2 className={`text-2xl font-bold ${raleway.className}`}>
-                  @codewithxavi
-                </h2>
+                <div className="group inline-block flex">
+                  <h2 className={`text-2xl font-bold ${raleway.className}`}>
+                    @codewithxavi &nbsp;
+                  </h2>
+                  <MdSportsSoccer
+                    color="black"
+                    size={30}
+                    className="self-end inline-block animate-custom-bounce"
+                  />
+                </div>
+
+
+
+
+
+
               </div>
             </Link>
             <div className="md:hidden">
@@ -77,7 +92,7 @@ export default function Navbar() {
                     }
                     onClick={() => setNavbar(!navbar)}
                   >
-                   <span className={`${raleway.className} `}>{item.label}</span>
+                    <span className={`${raleway.className} `}>{item.label}</span>
                   </Link>
                 )
               })}
