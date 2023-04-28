@@ -6,6 +6,8 @@ import { ThemeProvider } from "next-themes"
 
 import { Providers } from '../components/providers'
 
+import Head from "next/head";
+
 export const metadata = {
   title: "Javier Adrian - Portfolio",
   description: "Javier Adrian's Personal Portfolio",
@@ -32,10 +34,13 @@ export default function RootLayout({
   return (
     <>
       <html suppressHydrationWarning lang="en">
+        <head />
         <body className="dark:bg-stone-900">
-          <Navbar/>
-          <Providers>{children}</Providers>
-          <Footer/>
+          <ThemeProvider enableSystem={true} attribute="class">
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </body>
       </html>
     </>

@@ -68,6 +68,7 @@ export default function Navbar() {
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <Link
+                    aria-label={item.label}
                     key={idx}
                     to={item.page}
                     className={
