@@ -1,5 +1,5 @@
 "use client" // this is a client component
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from 'next/image';
@@ -7,7 +7,11 @@ import Image from 'next/image';
 import { raleway } from "../utils/fonts";
 import { interLatin } from "../utils/fonts";
 
+
+
+
 const HeroSection = () => {
+  
   return (
     <section id="home">
       <div className="flex flex-col items-center  animate-fadeIn animation-delay-2 ">
