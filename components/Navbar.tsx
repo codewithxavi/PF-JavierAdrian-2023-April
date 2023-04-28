@@ -41,7 +41,7 @@ export default function Navbar() {
         <div>
           <div className="flex items-center justify-between px-5  py-3 md:py-5 md:block sm:px-0">
 
-            <Link to="home">
+            <Link to="home" aria-label="Home">
               <div className="container flex items-center space-x-2">
                 <h2 className={`text-2xl font-bold ${raleway.className}`}>
                   @codewithxavi

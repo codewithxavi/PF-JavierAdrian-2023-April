@@ -3,28 +3,9 @@ import "../styles/globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import { ThemeProvider } from "next-themes"
+import { Metadata } from 'next';
+import Head from '../app/head';
 
-import { Providers } from '../components/providers'
-
-import Head from "next/head";
-
-export const metadata = {
-  title: "Javier Adrian - Portfolio",
-  description: "Javier Adrian's Personal Portfolio",
-  keywords: ["Frontend", "Fullstack", "Developer", "Next.js"],
-  openGraph: {
-      title: "Javier Adrian - Portfolio",
-      description: "Javier Adrian's Developer Portfolio built with NextJs 13.2",
-      images: [
-          {
-              url: "https://codewithxavi.vercel.app/xavi.webp",
-              width: 752,
-              height: 400,
-              alt: "portfolio thumbnail",
-          },
-      ],
-  },
-};
 
 export default function RootLayout({
   children,
@@ -34,8 +15,8 @@ export default function RootLayout({
   return (
     <>
       <html suppressHydrationWarning lang="en">
-        <head />
-        <body className="dark:bg-stone-900">
+        <Head />
+        <body  className="dark:bg-stone-900">
           <ThemeProvider enableSystem={true} attribute="class">
             <Navbar />
             {children}
