@@ -50,9 +50,10 @@ export default function Navbar() {
                     @codewithxavi &nbsp;
                   </h2>
                   <MdSportsSoccer
-                    color="black"
+                    color="black dark:text-white"
                     size={30}
                     className="self-end inline-block animate-custom-bounce"
+                    
                   />
                 </div>
 
