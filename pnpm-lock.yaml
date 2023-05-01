@@ -37,6 +37,9 @@ dependencies:
   react-scroll:
     specifier: ^1.8.9
     version: 1.8.9(react-dom@18.2.0)(react@18.2.0)
+  typed.js:
+    specifier: ^2.0.16
+    version: 2.0.16
   typescript:
     specifier: 4.9.4
     version: 4.9.4
@@ -2412,6 +2415,10 @@ packages:
       call-bind: 1.0.2
       for-each: 0.3.3
       is-typed-array: 1.1.10
+    dev: false
+
+  /typed.js@2.0.16:
+    resolution: {integrity: sha512-IBB52GlJiTUOnomwdVVf7lWgC6gScn8md+26zTHj5oJWA+4pSuclHE76rbGI2hnyO+NT+QXdIUHbfjAY5nEtcw==}
     dev: false
 
   /typescript@4.9.4:

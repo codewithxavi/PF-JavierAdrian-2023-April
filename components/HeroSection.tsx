@@ -1,5 +1,7 @@
 "use client" // this is a client component
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
+import Typed from 'typed.js';
+
 import Link from "next/link";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from 'next/image';
@@ -11,6 +13,23 @@ import { MdSportsSoccer } from "react-icons/md";
 
 
 const HeroSection = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    // Create a new instance of the Typed class when the component mounts
+    const typed = new Typed(typedRef.current, {
+      strings: ['I am a &nbsp; <strong>Software Engineer</strong>', 'I  <em>work</em>  with React, NextJS, NodeJS, Angular'],
+      typeSpeed: 50,
+      contentType: 'html', // add this option to allow HTML tags
+      loop: true,
+    });
+
+    // Destroy the instance of the Typed class when the component unmounts
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
 
   return (
     <section id="home">
@@ -20,6 +39,7 @@ const HeroSection = () => {
             Hi, I&apos;m Javi!
           </h1>
 
+          <span className={`pb-2 ${raleway.className} inline`} ref={typedRef}></span>
 
           <div className="md:flex justify-center">
             <div className="flex-col w-full">
@@ -50,6 +70,12 @@ const HeroSection = () => {
       </div>
     </section>
   )
+
 }
 
+
+
+
+
 export default HeroSection
+
