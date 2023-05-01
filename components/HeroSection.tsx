@@ -35,7 +35,7 @@ const HeroSection = () => {
     <section id="home">
       <div className="flex flex-col items-center  animate-fadeIn animation-delay-2 ">
         <div className="w-5/5 pt-24">
-          <h1 className={`flex pb-4 text-5xl font-extrabold text-transparent md:h-24 bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-950 dark:from-yellow-300 dark:to-emerald-500 md:text-7xl ${interLatin.className} font-bold`}>
+          <h1 className={`flex pb-4 text-5xl font-extrabold text-transparent md:h-24 bg-clip-text bg-gradient-to-r from-purple-800 to-fuchsia-950 dark:from-yellow-300 dark:to-emerald-500 md:text-7xl ${interLatin.className} font-bold drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]`}>
             Hi, I&apos;m Javi!
           </h1>
 
