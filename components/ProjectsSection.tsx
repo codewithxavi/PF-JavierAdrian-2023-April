@@ -52,7 +52,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects">
+    <section>
       <h2 className={`my-10 text-4xl flex items-center ${interLatin.className}`}>
         Projects <MdWorkOutline className="ml-2" />
       </h2>

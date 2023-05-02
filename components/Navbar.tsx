@@ -38,11 +38,10 @@ export default function Navbar() {
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
   return (
-    <header className="w-full mx-auto sm:px-8 fixed top-0 z-50  bg-white dark:bg-stone-900  dark:border-stone-600">
+    <header className={`w-full mx-auto sm:px-8 fixed top-0 z-50  bg-white dark:bg-stone-900  dark:border-stone-600 `}>
       <div className="justify-between md:items-center md:flex mx-auto max-w-[77rem]">
         <div>
           <div className="flex items-center justify-between px-5  py-3 md:py-5 md:block sm:px-0">
-
             <Link href="#home" aria-label="Home">
               <div className="container flex items-center space-x-2">
                 <div className="group inline-block flex">
@@ -56,12 +55,6 @@ export default function Navbar() {
                     
                   />
                 </div>
-
-
-
-
-
-
               </div>
             </Link>
             <div className="md:hidden">
@@ -75,7 +68,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-
         <div>
           <div
             className={`flex-1 justify-self-center px-6 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"

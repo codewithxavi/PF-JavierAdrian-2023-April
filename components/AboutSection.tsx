@@ -29,7 +29,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <section id="about">
+    <section>
       <div className="">
         <h2 className={`text-4xl mb-2 mt-5 ${interLatin.className} flex items-center`}>
           About Me <span className="ml-2"><HiOutlineUserCircle /></span>
@@ -41,7 +41,7 @@ const AboutSection = () => {
               My interest in programming started in 2016, and ever since, I&apos;ve been hooked! I started with front-end development, learning the basics of HTML, CSS, and JavaScript, and then moved on to back-end programming with popular languages like PHP and Java. These days, I&apos;m proud to say that I&apos;m a full-stack web developer, and I love creating powerful and efficient web applications.
             </p>
             <br />
-            <p className={`${raleway.className} leading-7`}>
+            <p className={`${raleway.className} leading-7`} id="projects">
               Aside from programming, I have a couple of other passions that I love to pursue. I&apos;m a huge football fan and love watching my favorite team play. I also enjoy taking walks with my friends, especially on weekends when we can explore the beautiful sights and sounds of Barcelona together. Last but not least, I&apos;m a music lover and enjoy listening to all kinds of different genres.
             </p>
             <br />

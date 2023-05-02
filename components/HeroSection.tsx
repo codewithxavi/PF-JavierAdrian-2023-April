@@ -48,7 +48,7 @@ const HeroSection = () => {
 
                 <p className={`leading-7 mt-5 ${raleway.className}`}>If your company is looking for a passionate and knowledgeable <b>web developer</b> who is committed to creating innovative solutions, I would be excited to discuss potential opportunities. Let&apos;s connect and explore how my skills and experience can contribute to the success of your team.</p>
               </div>
-              <Link className={`inline-flex items-center md:mt-12 lg:mt-24 rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${raleway.className}`} href="https://drive.google.com/file/d/1Yj1ErCagVHSaSoi2obPCxTrGeCgzUFsJ/view" target="blank" >
+              <Link id="about" className={`inline-flex items-center md:mt-12 lg:mt-24 rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${raleway.className}`} href="https://drive.google.com/file/d/1Yj1ErCagVHSaSoi2obPCxTrGeCgzUFsJ/view" target="blank" >
                 Download CV
                 <AiOutlineCloudDownload size={20} className="mx-2" />
 
