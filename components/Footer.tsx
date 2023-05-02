@@ -72,7 +72,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <p className={`mt-8 text-base text-regular-600 md:order-1 md:mt-0 ${raleway.className}`}>
+          <p className={`mt-8 text-base text-neutral-600 md:order-1 md:mt-0 ${raleway.className}`}>
             Developed with 💜 by Javier Adrián on {formattedDate} {/*at {formattedTime}*/ }
           </p>
         </div>
