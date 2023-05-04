@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import confetti from "canvas-confetti";
+import { Icon } from '@iconify/react';
 
 const shootConfetti = () => {
     const canvas = document.createElement("canvas");
@@ -68,7 +69,7 @@ const ScrollToTopButton = () => {
           aria-label="Scroll to top"
           
         >
-          <FaArrowCircleUp size={24} />
+         <Icon icon="line-md:uploading-loop" className='text-3xl' />
         </button>
       )}
     </>

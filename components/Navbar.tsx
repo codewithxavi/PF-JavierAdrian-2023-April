@@ -52,7 +52,7 @@ export default function Navbar() {
                     color="black dark:text-white"
                     size={30}
                     className="self-end inline-block animate-custom-bounce"
-                    
+
                   />
                 </div>
               </div>
@@ -81,11 +81,13 @@ export default function Navbar() {
                     key={idx}
                     href={`#${item.page}`}
                     className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 dark:hover:text-purple-400 cursor-pointer"
+                      "block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                     }
                     onClick={() => setNavbar(!navbar)}
                   >
-                    <span className={`${raleway.className} `}>{item.label}</span>
+                    <div className="border-b hover:border-purple-400">
+                      <span className={`\${raleway.className} `}>{item.label}</span>
+                    </div>
                   </Link>
                 )
               })}
