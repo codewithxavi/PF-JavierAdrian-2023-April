@@ -52,30 +52,20 @@ const AboutSection = () => {
                 return (
                   <div
                     key={idx}
-                    className="bg-neutral-600  px-4 py-2 mr-4 mt-4 text-sky-50 rounded font-semibold"
+                    className="bg-white bg-opacity-25 backdrop-filter backdrop-blur-md px-4 py-2 mr-4 mt-4 text-sky-50 rounded-lg font-semibold shadow-md hover:shadow-lg transition duration-300 ease-in-out"
                     title={item.name}
                   >
-                    <span
-                      
-                      className="dark:text-white-900 text-3xl pointer-events-none"
-                    >
-                      {/* <IconContext.Provider value={{ attr: item.name }}>
-                        {item.icon}
-                      </IconContext.Provider> */}
-
-                     
-                      {/* <IconContext.Provider value={{ attr: { title: item.name as string } }}>
-                        {item.name}
-                      </IconContext.Provider> */}
-
+                    <span className="dark:text-neutral-300 text-fuchsia-800 text-3xl pointer-events-none">
                       {item.icon}
                     </span>
                   </div>
-                )
+                );
               })}
             </div>
-
           </div>
+
+
+
         </div>
       </div>
     </section>

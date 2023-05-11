@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                       alt={project.name}
                       width={1000}
                       height={1000}
-                      className="rounded shadow-xl hover:opacity-70"
+                      className="rounded shadow-2xl hover:opacity-70"
                     />
                   </Link>
                 </div>

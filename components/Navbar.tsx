@@ -45,7 +45,7 @@ export default function Navbar() {
             <Link href="#home" aria-label="Home">
               <div className="container flex items-center space-x-2">
                 <div className="group inline-block flex">
-                  <h2 className={`text-2xl font-bold ${raleway.className}`}>
+                  <h2 className={`text-2xl font-bold  ${raleway.className} `}>
                     @codewithxavi &nbsp;
                   </h2>
                   <MdSportsSoccer
@@ -86,7 +86,7 @@ export default function Navbar() {
                     onClick={() => setNavbar(!navbar)}
                   >
                     <div className="border-b hover:border-purple-400">
-                      <span className={`\${raleway.className} `}>{item.label}</span>
+                      <span className={`${raleway.className} `}>{item.label}</span>
                     </div>
                   </Link>
                 )
